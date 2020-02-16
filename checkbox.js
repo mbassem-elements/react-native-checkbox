@@ -45,7 +45,11 @@ const CheckBox = props => {
         />
         {label ? (
           <View style={styles.labelContainer}>
-            <Text style={[styles.label, labelStyle]}>{label}</Text>
+            {typeof label === 'string' ? (
+              <Text style={[styles.label, labelStyle]}>{label}</Text>
+            ) : (
+              label
+            )}
           </View>
         ) : (
           <></>
@@ -76,7 +80,7 @@ var styles = StyleSheet.create({
 
 CheckBox.propTypes = {
   disabled: PropTypes.bool,
-  label: PropTypes.string,
+  label: PropTypes.any,
   labelStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   checkboxStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   containerStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
