@@ -1,6 +1,6 @@
 {
   "name": "react-native-checkbox",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Checkbox component for React native",
   "main": "checkbox.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sconxu/react-native-checkbox.git"
+    "url": "git+https://github.com/mbassem-elements/react-native-checkbox.git"
   },
   "keywords": [
     "react-native",
