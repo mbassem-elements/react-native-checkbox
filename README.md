@@ -6,7 +6,7 @@ Checkbox component for React native
 Install the component through npm using:
 
 ```
-npm install react-native-checkbox --save
+yarn add mbassem-elements/react-native-checkbox
 ```
 
 
