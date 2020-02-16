@@ -20,6 +20,7 @@ const CheckBox = props => {
     onChange,
     checked,
     containerStyle,
+    mainContainerStyle,
     checkboxStyle,
     checkedImage,
     uncheckedImage,
@@ -37,7 +38,7 @@ const CheckBox = props => {
   return (
     <TouchableWithoutFeedback
       onPress={_onChange}
-      style={[styles.flexContainer]}
+      style={[styles.flexContainer, mainContainerStyle]}
       disabled={disabled}>
       <View style={[styles.flexContainer, containerStyle]}>
         <Image
@@ -86,6 +87,7 @@ CheckBox.propTypes = {
   checkboxStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   containerStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   labelContainerStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+  mainContainerStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   checked: PropTypes.bool,
   checkedImage: PropTypes.number,
   uncheckedImage: PropTypes.number,
@@ -99,6 +101,7 @@ CheckBox.defaultProps = {
   checkboxStyle: {},
   containerStyle: {},
   labelContainerStyle: {},
+  mainContainerStyle: {},
   checked: false,
   checkedImage: CB_ENABLED_IMAGE,
   uncheckedImage: CB_DISABLED_IMAGE,
