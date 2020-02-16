@@ -25,6 +25,7 @@ const CheckBox = props => {
     uncheckedImage,
     labelStyle,
     label,
+    labelContainerStyle,
   } = props;
 
   const _onChange = () => {
@@ -44,7 +45,7 @@ const CheckBox = props => {
           source={checked ? checkedImage : uncheckedImage}
         />
         {label ? (
-          <View style={styles.labelContainer}>
+          <View style={[styles.labelContainer, labelContainerStyle]}>
             {typeof label === 'string' ? (
               <Text style={[styles.label, labelStyle]}>{label}</Text>
             ) : (
@@ -84,6 +85,7 @@ CheckBox.propTypes = {
   labelStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   checkboxStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   containerStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+  labelContainerStyle: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   checked: PropTypes.bool,
   checkedImage: PropTypes.number,
   uncheckedImage: PropTypes.number,
@@ -96,6 +98,7 @@ CheckBox.defaultProps = {
   labelStyle: {},
   checkboxStyle: {},
   containerStyle: {},
+  labelContainerStyle: {},
   checked: false,
   checkedImage: CB_ENABLED_IMAGE,
   uncheckedImage: CB_DISABLED_IMAGE,
